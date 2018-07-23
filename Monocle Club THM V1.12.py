@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix='~')
 @bot.event
 async def on_ready():
     print ("Bot active")
-    print ("Version 1.11")
+    print ("Version 1.12")
     bot.say("Activated and Online")
 
 
@@ -32,6 +32,9 @@ async def developer(ctx):
 async def hug(ctx, user: discord.Member):
     await bot.say("Hugssss for {}".format(user.name))
 
+@bot.command(pass_context=True)
+async def highfive(ctx, user: discord.Member):
+    await bot.say("High five, {}".format(user.name))
 
 
 bot.run("token")
