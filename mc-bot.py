@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix='~')
 @bot.event
 async def on_ready():
     print ("Bot active")
-    print ("Version 1.12")
+    print ("Version 1.13.1")
     bot.say("Activated and Online")
 
 
@@ -31,6 +31,7 @@ async def developer(ctx):
 @bot.command(pass_context=True)
 async def hug(ctx, user: discord.Member):
     await bot.say("Hugssss for {}".format(user.name))
+    await bot.say("https://cdn.discordapp.com/attachments/465755103584976899/477914468475731978/abrazo-600x437.png")
 
 @bot.command(pass_context=True)
 async def highfive(ctx, user: discord.Member):
